@@ -85,9 +85,21 @@ console.log(user)
 
 
 const products = fetch('https://fakestoreapi.com/products') 
-products
-    .then(res => res.json())
-    .then((data) => {
-        return data
 
-})
+//доделал в такси посмотрите пожалуйста
+
+
+    .then(res => res.json())
+    .then(data => {
+      const result = data 
+        .filter(product => product.price > 100)
+        .map(product => ({
+          title: product.title,
+          price: product.price
+        }))
+        console.log(result)
+    })
+    .catch(err => console.error(err))
+
+
+
