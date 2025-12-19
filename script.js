@@ -83,5 +83,11 @@ console.log(user)
 //   price: 120
 // }
 
-const products = fetch('https://fakestoreapi.com/products') 
 
+const products = fetch('https://fakestoreapi.com/products') 
+products
+    .then(res => res.json())
+    .then((data) => {
+        return data
+
+})
