@@ -83,3 +83,5 @@ console.log(user)
 //   price: 120
 // }
 
+const products = fetch('https://fakestoreapi.com/products') 
+
